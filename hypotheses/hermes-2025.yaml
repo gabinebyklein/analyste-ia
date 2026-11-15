@@ -1,0 +1,30 @@
+# Hypothèses de valorisation Hermès, écrites et justifiées une par une.
+# Ce sont des CHOIX d'analyste, pas des faits : le tableau de sensibilité montre ce qui change si on se trompe.
+societe: Hermès
+ticker: RMS.PA
+lei: 969500Y4IJGHJE2MTJ13   # identifiant de la société, pour retrouver ses dépôts officiels ESEF
+annee_de_base: "2025"
+
+projection:   # 2026 à 2030
+  croissance_ventes_pct: [7.0, 7.0, 7.0, 6.0, 6.0]
+  # 2025 : +5,5 % publié (environ +9 % à taux de change constants selon le groupe). On retient 7 %, puis 6 % :
+  # la marque continue de croître plus vite que le luxe, mais on ne prolonge pas les +15 % des années 2021-2023.
+  marge_roc_pct: [40.5, 40.5, 40.5, 40.5, 40.5]
+  # Marge opérationnelle courante 2025 : 41,0 % (2024 : 40,5 %). Stable depuis plusieurs années : on la garde.
+  taux_impot_pct: 25.8          # taux légal de l'impôt sur les sociétés en France
+  bfr_pct_ventes_supplementaires: 20.0
+  # Comme tout le luxe, Hermès immobilise des stocks : 20 % de chaque euro de ventes en plus.
+  capex_pct_ventes: 7.2
+  # 2025 : 7,3 % ; 2024 : 7,0 % (nouvelles manufactures de maroquinerie). Moyenne des deux ans.
+
+wacc:
+  taux_sans_risque_pct: 3.4     # Bund allemand 10 ans, oct. 2026 (même choix que pour LVMH)
+  prime_risque_marche_pct: 4.2  # Damodaran, marché mature, juillet 2026
+  beta: 1.14                    # Yahoo Finance
+  spread_dette_pct: 0.5         # Hermès n'a presque pas de dette financière : le poids de la dette est quasi nul
+
+valeur_terminale:
+  croissance_perpetuelle_pct: 2.5   # inflation long terme + un peu de croissance réelle
+
+comparables: [MC.PA, KER.PA, CFR.SW, MONC.MI, 1913.HK, BRBY.L]
+# LVMH, Kering, Richemont, Moncler, Prada, Burberry

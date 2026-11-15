@@ -1,0 +1,203 @@
+{
+ "lei": "969500Y4IJGHJE2MTJ13",
+ "sources": [
+  "https://filings.xbrl.org/969500Y4IJGHJE2MTJ13/2026-12-31/ESEF/FR/0/hermes-2025-12-31-1-fr.json",
+  "https://filings.xbrl.org/969500Y4IJGHJE2MTJ13/2024-12-31/ESEF/FR/0/hermes-2024-12-31-0-fr.json"
+ ],
+ "comparaisons": [
+  {
+   "poste": "ventes",
+   "annee": "2024",
+   "lu_dans_le_rapport": 15170.0,
+   "page": 356,
+   "depot_officiel": 15170.0,
+   "concorde": true
+  },
+  {
+   "poste": "ventes",
+   "annee": "2025",
+   "lu_dans_le_rapport": 16002.0,
+   "page": 356,
+   "depot_officiel": 16002.0,
+   "concorde": true
+  },
+  {
+   "poste": "marge_brute",
+   "annee": "2024",
+   "lu_dans_le_rapport": 10660.0,
+   "page": 356,
+   "depot_officiel": 10660.0,
+   "concorde": true
+  },
+  {
+   "poste": "marge_brute",
+   "annee": "2025",
+   "lu_dans_le_rapport": 11379.0,
+   "page": 356,
+   "depot_officiel": 11379.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_operationnel",
+   "annee": "2024",
+   "lu_dans_le_rapport": 6150.0,
+   "page": 356,
+   "depot_officiel": 6150.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_operationnel",
+   "annee": "2025",
+   "lu_dans_le_rapport": 6569.0,
+   "page": 356,
+   "depot_officiel": 6569.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_net_part_du_groupe",
+   "annee": "2024",
+   "lu_dans_le_rapport": 4603.0,
+   "page": 356,
+   "depot_officiel": 4603.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_net_part_du_groupe",
+   "annee": "2025",
+   "lu_dans_le_rapport": 4524.0,
+   "page": 356,
+   "depot_officiel": 4524.0,
+   "concorde": true
+  },
+  {
+   "poste": "bpa_dilue",
+   "annee": "2024",
+   "lu_dans_le_rapport": 43.87,
+   "page": 356,
+   "depot_officiel": 43.87,
+   "concorde": true
+  },
+  {
+   "poste": "bpa_dilue",
+   "annee": "2025",
+   "lu_dans_le_rapport": 43.07,
+   "page": 356,
+   "depot_officiel": 43.07,
+   "concorde": true
+  },
+  {
+   "poste": "capitaux_propres",
+   "annee": "2024",
+   "lu_dans_le_rapport": 17334.0,
+   "page": 357,
+   "depot_officiel": 17334.0,
+   "concorde": true
+  },
+  {
+   "poste": "capitaux_propres",
+   "annee": "2025",
+   "lu_dans_le_rapport": 18846.0,
+   "page": 357,
+   "depot_officiel": 18846.0,
+   "concorde": true
+  },
+  {
+   "poste": "interets_minoritaires",
+   "annee": "2024",
+   "lu_dans_le_rapport": 7.0,
+   "page": 357,
+   "depot_officiel": 7.0,
+   "concorde": true
+  },
+  {
+   "poste": "interets_minoritaires",
+   "annee": "2025",
+   "lu_dans_le_rapport": 6.0,
+   "page": 357,
+   "depot_officiel": 6.0,
+   "concorde": true
+  },
+  {
+   "poste": "tresorerie",
+   "annee": "2024",
+   "lu_dans_le_rapport": 11642.0,
+   "page": 357,
+   "depot_officiel": 11642.0,
+   "concorde": true
+  },
+  {
+   "poste": "tresorerie",
+   "annee": "2025",
+   "lu_dans_le_rapport": 12239.0,
+   "page": 357,
+   "depot_officiel": 12239.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_long_terme",
+   "annee": "2024",
+   "lu_dans_le_rapport": 1781.0,
+   "page": 357,
+   "depot_officiel": 1781.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_long_terme",
+   "annee": "2025",
+   "lu_dans_le_rapport": 1987.0,
+   "page": 357,
+   "depot_officiel": 1987.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_court_terme",
+   "annee": "2024",
+   "lu_dans_le_rapport": 332.0,
+   "page": 357,
+   "depot_officiel": 332.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_court_terme",
+   "annee": "2025",
+   "lu_dans_le_rapport": 325.0,
+   "page": 357,
+   "depot_officiel": 325.0,
+   "concorde": true
+  },
+  {
+   "poste": "flux_exploitation",
+   "annee": "2024",
+   "lu_dans_le_rapport": 5139.0,
+   "page": 359,
+   "depot_officiel": 5139.0,
+   "concorde": true
+  },
+  {
+   "poste": "flux_exploitation",
+   "annee": "2025",
+   "lu_dans_le_rapport": 5374.0,
+   "page": 359,
+   "depot_officiel": 5374.0,
+   "concorde": true
+  },
+  {
+   "poste": "remboursements_dettes_locatives",
+   "annee": "2024",
+   "lu_dans_le_rapport": -305.0,
+   "page": 359,
+   "depot_officiel": 305.0,
+   "concorde": true
+  },
+  {
+   "poste": "remboursements_dettes_locatives",
+   "annee": "2025",
+   "lu_dans_le_rapport": -332.0,
+   "page": 359,
+   "depot_officiel": 332.0,
+   "concorde": true
+  }
+ ],
+ "nb_compares": 24,
+ "nb_concordants": 24
+}

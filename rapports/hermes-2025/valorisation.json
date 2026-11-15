@@ -1,0 +1,289 @@
+{
+ "societe": "Hermès",
+ "ticker": "RMS.PA",
+ "annee_de_base": "2025",
+ "historique": {
+  "2024": {
+   "ventes": 15170.0,
+   "croissance_ventes_pct": null,
+   "marge_brute_pct": 70.27027027027027,
+   "marge_roc_pct": 40.54054054054054,
+   "marge_nette_pct": 30.342781806196438,
+   "ebitda": 6994.0,
+   "amortissements_pct": 5.563612392880685,
+   "capex_pct": 7.033618984838497,
+   "loyers_pct": 2.0105471324983517,
+   "fcf_exploitation": 3767.0,
+   "rentabilite_capitaux_propres_pct": 26.565475846944075,
+   "dette_financiere_nette": -11581.0,
+   "dettes_locatives": 2113.0,
+   "levier_dette_nette_sur_ebitda": -1.3537317700886473,
+   "dividendes_verses": 2705.0
+  },
+  "2025": {
+   "ventes": 16002.0,
+   "croissance_ventes_pct": 5.484508899143048,
+   "marge_brute_pct": 71.10986126734159,
+   "marge_roc_pct": 41.051118610173724,
+   "marge_nette_pct": 28.271466066741656,
+   "ebitda": 7495.0,
+   "amortissements_pct": 5.786776652918385,
+   "capex_pct": 7.255343082114736,
+   "loyers_pct": 2.0747406574178227,
+   "fcf_exploitation": 3881.0,
+   "rentabilite_capitaux_propres_pct": 24.012738853503183,
+   "dette_financiere_nette": -12205.0,
+   "dettes_locatives": 2312.0,
+   "levier_dette_nette_sur_ebitda": -1.3199466310873915,
+   "dividendes_verses": 2796.0
+  }
+ },
+ "marche": {
+  "RMS.PA": {
+   "shortName": "HERMES INTL",
+   "currency": "EUR",
+   "currentPrice": 1341.5,
+   "enterpriseToEbitda": 18.493,
+   "trailingPE": 31.197674,
+   "beta": 1.143,
+   "sharesOutstanding": 104602982,
+   "dividendYield": 1.34,
+   "fiftyTwoWeekLow": 1228.0,
+   "fiftyTwoWeekHigh": 2300.0
+  },
+  "MC.PA": {
+   "shortName": "LVMH",
+   "currency": "EUR",
+   "currentPrice": 403.45,
+   "enterpriseToEbitda": 11.243,
+   "trailingPE": 18.388788,
+   "beta": 0.896,
+   "sharesOutstanding": 490630174,
+   "dividendYield": 3.22,
+   "fiftyTwoWeekLow": 375.65,
+   "fiftyTwoWeekHigh": 654.3
+  },
+  "KER.PA": {
+   "shortName": "KERING",
+   "currency": "EUR",
+   "currentPrice": 184.64,
+   "enterpriseToEbitda": 13.09,
+   "trailingPE": null,
+   "beta": 1.074,
+   "sharesOutstanding": 122651328,
+   "dividendYield": 1.62,
+   "fiftyTwoWeekLow": 173.5,
+   "fiftyTwoWeekHigh": 320.5
+  },
+  "CFR.SW": {
+   "shortName": "RICHEMONT N",
+   "currency": "CHF",
+   "currentPrice": 169.45,
+   "enterpriseToEbitda": 15.772,
+   "trailingPE": 30.978064,
+   "beta": 1.19,
+   "sharesOutstanding": 534182089,
+   "dividendYield": 1.95,
+   "fiftyTwoWeekLow": 127.2,
+   "fiftyTwoWeekHigh": 202.2
+  },
+  "MONC.MI": {
+   "shortName": "MONCLER",
+   "currency": "EUR",
+   "currentPrice": 44.36,
+   "enterpriseToEbitda": 13.358,
+   "trailingPE": 18.876596,
+   "beta": 1.099,
+   "sharesOutstanding": 271989727,
+   "dividendYield": 3.16,
+   "fiftyTwoWeekLow": 41.93,
+   "fiftyTwoWeekHigh": 59.34
+  },
+  "1913.HK": {
+   "shortName": "PRADA",
+   "currency": "HKD",
+   "currentPrice": 39.66,
+   "enterpriseToEbitda": 71.101,
+   "trailingPE": 14.014134,
+   "beta": 0.828,
+   "sharesOutstanding": 2558824000,
+   "dividendYield": 3.79,
+   "fiftyTwoWeekLow": 34.52,
+   "fiftyTwoWeekHigh": 47.66
+  },
+  "BRBY.L": {
+   "shortName": "BURBERRY GROUP PLC ORD 0.05P",
+   "currency": "GBp",
+   "currentPrice": 1185.0,
+   "enterpriseToEbitda": 16.824,
+   "trailingPE": 79.0,
+   "beta": 0.664,
+   "sharesOutstanding": 357656580,
+   "dividendYield": 0.0,
+   "fiftyTwoWeekLow": 953.4,
+   "fiftyTwoWeekHigh": 1376.5
+  }
+ },
+ "cours": 1341.5,
+ "capitalisation": 140324.900353,
+ "nb_actions_m": 104.602982,
+ "hypotheses": {
+  "societe": "Hermès",
+  "ticker": "RMS.PA",
+  "lei": "969500Y4IJGHJE2MTJ13",
+  "annee_de_base": "2025",
+  "projection": {
+   "croissance_ventes_pct": [
+    7.0,
+    7.0,
+    7.0,
+    6.0,
+    6.0
+   ],
+   "marge_roc_pct": [
+    40.5,
+    40.5,
+    40.5,
+    40.5,
+    40.5
+   ],
+   "taux_impot_pct": 25.8,
+   "bfr_pct_ventes_supplementaires": 20.0,
+   "capex_pct_ventes": 7.2
+  },
+  "wacc": {
+   "taux_sans_risque_pct": 3.4,
+   "prime_risque_marche_pct": 4.2,
+   "beta": 1.14,
+   "spread_dette_pct": 0.5
+  },
+  "valeur_terminale": {
+   "croissance_perpetuelle_pct": 2.5
+  },
+  "comparables": [
+   "MC.PA",
+   "KER.PA",
+   "CFR.SW",
+   "MONC.MI",
+   "1913.HK",
+   "BRBY.L"
+  ]
+ },
+ "interets_minoritaires": 6.0,
+ "poids_dette": 0.0,
+ "wacc": {
+  "wacc_pct": 8.187999999999999,
+  "beta_retenu": 1.14,
+  "cout_fonds_propres_pct": 8.187999999999999,
+  "cout_dette_apres_impot_pct": 2.8937999999999997,
+  "poids_dette_pct": 0.0
+ },
+ "projection": [
+  {
+   "annee": 2026,
+   "ventes": 17122.14,
+   "roc": 6934.466699999999,
+   "fcf": 4324.1322113999995
+  },
+  {
+   "annee": 2027,
+   "ventes": 18320.6898,
+   "roc": 7419.879368999999,
+   "fcf": 4626.821466198
+  },
+  {
+   "annee": 2028,
+   "ventes": 19603.138086000003,
+   "roc": 7939.270924830002,
+   "fcf": 4950.69896883186
+  },
+  {
+   "annee": 2029,
+   "ventes": 20779.326371160005,
+   "roc": 8415.627180319801,
+   "fcf": 5284.382286561772
+  },
+  {
+   "annee": 2030,
+   "ventes": 22026.085953429607,
+   "roc": 8920.564811138991,
+   "fcf": 5601.445223755481
+  }
+ ],
+ "dcf": {
+  "valeur_entreprise": 87599.33036650381,
+  "part_valeur_terminale_pct": 77.74422220079643,
+  "prix_par_action": 954.0677374427415,
+  "croissance_perpetuelle_pct": 2.5,
+  "croissance_implicite_dans_le_cours_pct": 4.550677967270815
+ },
+ "sensibilite": {
+  "7.2": {
+   "2.0": 1052.325153320426,
+   "2.5": 1135.7227991606915,
+   "3.0": 1239.0339229952897
+  },
+  "7.7": {
+   "2.0": 968.6614171880823,
+   "2.5": 1036.129323335561,
+   "3.0": 1117.9888476885594
+  },
+  "8.2": {
+   "2.0": 898.5413051274294,
+   "2.5": 954.0677374427415,
+   "3.0": 1020.2970287239964
+  },
+  "8.7": {
+   "2.0": 838.9267125769258,
+   "2.5": 885.2877423315525,
+   "3.0": 939.7994453904387
+  },
+  "9.2": {
+   "2.0": 787.6248754316456,
+   "2.5": 826.8100742878413,
+   "3.0": 872.3277228622333
+  }
+ },
+ "comparables": {
+  "ve_ebitda_q1_med_q3": [
+   12.1665,
+   13.358,
+   16.298000000000002
+  ],
+  "per_q1_med_q3": [
+   15.1077975,
+   18.632692,
+   27.952697
+  ],
+  "prix_ve_ebitda": [
+   966.2718554237775,
+   1051.6450668681703,
+   1262.301585245438
+  ],
+  "prix_per": [
+   650.692838325,
+   802.51004444,
+   1203.9226597900001
+  ],
+  "retenus_ve_ebitda": 5,
+  "retenus_per": 4
+ },
+ "fourchettes": {
+  "DCF (WACC ± 1 pt, g ± 0,5 pt)": [
+   787.6248754316456,
+   1239.0339229952897
+  ],
+  "VE/EBITDA des pairs": [
+   966.2718554237775,
+   1262.301585245438
+  ],
+  "PER des pairs": [
+   650.692838325,
+   1203.9226597900001
+  ],
+  "Cours sur 52 semaines": [
+   1228.0,
+   2300.0
+  ]
+ }
+}

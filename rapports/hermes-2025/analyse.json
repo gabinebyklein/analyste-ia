@@ -1,0 +1,16 @@
+{
+ "en_une_phrase": "En 2025, Hermès réalise 16,0 Md€ de ventes (+5,5 %) avec une marge opérationnelle courante de 41,1 %. Le cours de 1 341,5 € se situe au-dessus des fourchettes de valeur issues du DCF (954 €) et des comparables.",
+ "points_forts": [
+  "Les ventes progressent de 5,5 % à 16,0 Md€. La marge brute passe de 70,3 % à 71,1 %.",
+  "La marge opérationnelle courante s'établit à 41,1 %, contre 40,5 % en 2024. L'EBITDA passe de 7,0 Md€ à 7,5 Md€.",
+  "Le bilan affiche une trésorerie nette de 12,2 Md€, contre 11,6 Md€ en 2024, soit un levier de -1,3x l'EBITDA. Le flux de trésorerie d'exploitation disponible atteint 3,9 Md€."
+ ],
+ "points_de_vigilance": [
+  "La marge nette recule de 30,3 % à 28,3 %. La rentabilité des capitaux propres baisse de 26,6 % à 24,0 %.",
+  "À 1 341,5 €, le cours dépasse la borne haute de chaque fourchette de valorisation : 1 239 € pour le DCF, 1 262 € pour le VE/EBITDA des pairs et 1 204 € pour le PER des pairs.",
+  "La valeur terminale représente 77,7 % du DCF, ce qui rend le résultat sensible aux hypothèses de long terme. Les comparables reposent sur un échantillon restreint de 5 pairs en VE/EBITDA et de 4 pairs en PER."
+ ],
+ "lecture_de_la_valorisation": "Le DCF, avec un WACC de 8,2 % et une croissance perpétuelle de 2,5 %, aboutit à 954 € par action, dans une fourchette de 788 à 1 239 €. Les multiples médians des pairs donnent 1 052 € en VE/EBITDA (13,4x) et 803 € en PER (18,6x), avec des fourchettes de 966 à 1 262 € et de 651 à 1 204 €. Pour justifier le cours de 1 341,5 €, il faut une croissance perpétuelle de 4,6 %, contre 2,5 % retenus dans le modèle.",
+ "pour_un_gestionnaire_de_patrimoine": "Le rendement du dividende est de 1,34 % pour 2,8 Md€ versés en 2025, et la société n'a pas d'endettement financier net, avec 12,2 Md€ de trésorerie nette et un poids de la dette nul dans le WACC. Le beta de 1,14 traduit une sensibilité au marché un peu supérieure à la moyenne, et le cours a évolué entre 1 228 € et 2 300 € sur 52 semaines.",
+ "chiffres_non_retrouves": []
+}

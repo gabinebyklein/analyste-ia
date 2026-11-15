@@ -1,0 +1,289 @@
+{
+ "societe": "Danone",
+ "ticker": "BN.PA",
+ "annee_de_base": "2025",
+ "historique": {
+  "2024": {
+   "ventes": 27376.0,
+   "croissance_ventes_pct": null,
+   "marge_brute_pct": null,
+   "marge_roc_pct": 12.996785505552308,
+   "marge_nette_pct": 7.382378725891292,
+   "ebitda": 4726.0,
+   "amortissements_pct": 4.266510812390415,
+   "capex_pct": 3.3715663354763294,
+   "loyers_pct": -0.0,
+   "fcf_exploitation": 2908.0,
+   "rentabilite_capitaux_propres_pct": 11.35776104304822,
+   "dette_financiere_nette": 13327.0,
+   "dettes_locatives": 0.0,
+   "levier_dette_nette_sur_ebitda": 2.819932289462548,
+   "dividendes_verses": 1348.0
+  },
+  "2025": {
+   "ventes": 27283.0,
+   "croissance_ventes_pct": -0.33971361776738984,
+   "marge_brute_pct": null,
+   "marge_roc_pct": 13.4332734669941,
+   "marge_nette_pct": 6.689147087930213,
+   "ebitda": 5020.0,
+   "amortissements_pct": 4.96646263240846,
+   "capex_pct": 3.8668768097349995,
+   "loyers_pct": -0.0,
+   "fcf_exploitation": 2724.0,
+   "rentabilite_capitaux_propres_pct": 10.787327107223076,
+   "dette_financiere_nette": 13136.0,
+   "dettes_locatives": 0.0,
+   "levier_dette_nette_sur_ebitda": 2.6167330677290837,
+   "dividendes_verses": 1379.0
+  }
+ },
+ "marche": {
+  "BN.PA": {
+   "shortName": "DANONE",
+   "currency": "EUR",
+   "currentPrice": 69.8,
+   "enterpriseToEbitda": 11.986,
+   "trailingPE": 23.112583,
+   "beta": 0.156,
+   "sharesOutstanding": 644095494,
+   "dividendYield": 3.22,
+   "fiftyTwoWeekLow": 57.26,
+   "fiftyTwoWeekHigh": 78.7
+  },
+  "NESN.SW": {
+   "shortName": "NESTLE N",
+   "currency": "CHF",
+   "currentPrice": 87.72,
+   "enterpriseToEbitda": 17.175,
+   "trailingPE": 30.35294,
+   "beta": 0.477,
+   "sharesOutstanding": 2572220000,
+   "dividendYield": 3.53,
+   "fiftyTwoWeekLow": 70.29,
+   "fiftyTwoWeekHigh": 87.75
+  },
+  "ULVR.L": {
+   "shortName": "UNILEVER PLC ORD 3.5P",
+   "currency": "GBp",
+   "currentPrice": 4987.5,
+   "enterpriseToEbitda": 12.475,
+   "trailingPE": 13.51626,
+   "beta": 0.463,
+   "sharesOutstanding": 2153366959,
+   "dividendYield": 3.13,
+   "fiftyTwoWeekLow": 3644.0,
+   "fiftyTwoWeekHigh": 5542.11
+  },
+  "MDLZ": {
+   "shortName": "Mondelez International, Inc.",
+   "currency": "USD",
+   "currentPrice": 67.54,
+   "enterpriseToEbitda": 14.749,
+   "trailingPE": 21.305994,
+   "beta": 0.356,
+   "sharesOutstanding": 1265838379,
+   "dividendYield": 3.08,
+   "fiftyTwoWeekLow": 51.2,
+   "fiftyTwoWeekHigh": 68.75
+  },
+  "GIS": {
+   "shortName": "General Mills, Inc.",
+   "currency": "USD",
+   "currentPrice": 34.32,
+   "enterpriseToEbitda": 9.238,
+   "trailingPE": null,
+   "beta": -0.012,
+   "sharesOutstanding": 534687144,
+   "dividendYield": 7.11,
+   "fiftyTwoWeekLow": 31.18,
+   "fiftyTwoWeekHigh": 49.59
+  },
+  "KHC": {
+   "shortName": "The Kraft Heinz Company",
+   "currency": "USD",
+   "currentPrice": 25.11,
+   "enterpriseToEbitda": 8.507,
+   "trailingPE": null,
+   "beta": 0.103,
+   "sharesOutstanding": 1183828946,
+   "dividendYield": 6.37,
+   "fiftyTwoWeekLow": 21.035,
+   "fiftyTwoWeekHigh": 28.09
+  },
+  "KDP": {
+   "shortName": "Keurig Dr Pepper Inc.",
+   "currency": "USD",
+   "currentPrice": 36.34,
+   "enterpriseToEbitda": 16.631,
+   "trailingPE": 32.73874,
+   "beta": 0.355,
+   "sharesOutstanding": 1360948350,
+   "dividendYield": 2.53,
+   "fiftyTwoWeekLow": 24.88,
+   "fiftyTwoWeekHigh": 38.29
+  }
+ },
+ "cours": 69.8,
+ "capitalisation": 44957.8654812,
+ "nb_actions_m": 644.095494,
+ "hypotheses": {
+  "societe": "Danone",
+  "ticker": "BN.PA",
+  "lei": "969500KMUQ2B6CBAF162",
+  "annee_de_base": "2025",
+  "projection": {
+   "croissance_ventes_pct": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0
+   ],
+   "marge_roc_pct": [
+    13.5,
+    13.7,
+    13.9,
+    14.1,
+    14.3
+   ],
+   "taux_impot_pct": 25.8,
+   "bfr_pct_ventes_supplementaires": 0.0,
+   "capex_pct_ventes": 3.7
+  },
+  "wacc": {
+   "taux_sans_risque_pct": 3.4,
+   "prime_risque_marche_pct": 4.2,
+   "beta": 0.67,
+   "spread_dette_pct": 1.0
+  },
+  "valeur_terminale": {
+   "croissance_perpetuelle_pct": 2.0
+  },
+  "comparables": [
+   "NESN.SW",
+   "ULVR.L",
+   "MDLZ",
+   "GIS",
+   "KHC",
+   "KDP"
+  ]
+ },
+ "interets_minoritaires": 52.0,
+ "poids_dette": 0.22611681786351429,
+ "wacc": {
+  "wacc_pct": 5.547136280756924,
+  "beta_retenu": 0.67,
+  "cout_fonds_propres_pct": 6.214,
+  "cout_dette_apres_impot_pct": 3.2648,
+  "poids_dette_pct": 22.61168178635143
+ },
+ "projection": [
+  {
+   "annee": 2026,
+   "ventes": 28101.49,
+   "roc": 3793.7011500000003,
+   "fcf": 3170.8211233000006
+  },
+  {
+   "annee": 2027,
+   "ventes": 28944.534700000004,
+   "roc": 3965.4012539000005,
+   "fcf": 3308.8994464938005
+  },
+  {
+   "annee": 2028,
+   "ventes": 29812.870741000006,
+   "roc": 4143.989032999001,
+   "fcf": 3452.4087300682586
+  },
+  {
+   "annee": 2029,
+   "ventes": 30707.256863230006,
+   "roc": 4329.723217715431,
+   "fcf": 3601.5505611553403
+  },
+  {
+   "annee": 2030,
+   "ventes": 31628.47456912691,
+   "roc": 4522.871863385149,
+   "fcf": 3756.5337342505854
+  }
+ ],
+ "dcf": {
+  "valeur_entreprise": 97146.9267881205,
+  "part_valeur_terminale_pct": 84.88838122588818,
+  "prix_par_action": 130.35167544289715,
+  "croissance_perpetuelle_pct": 2.0,
+  "croissance_implicite_dans_le_cours_pct": -0.9858067479529198
+ },
+ "sensibilite": {
+  "4.5": {
+   "1.5": 158.51741717676026,
+   "2.0": 189.96696543168386,
+   "2.5": 236.77921745506154
+  },
+  "5.0": {
+   "1.5": 133.11017706384857,
+   "2.0": 155.26663916033957,
+   "2.5": 186.12167866074813
+  },
+  "5.5": {
+   "1.5": 113.9836792396191,
+   "2.0": 130.35167544289715,
+   "2.5": 152.09127130407165
+  },
+  "6.0": {
+   "1.5": 99.06598166481703,
+   "2.0": 111.59524267081835,
+   "2.5": 127.65672234966064
+  },
+  "6.5": {
+   "1.5": 87.10618070201978,
+   "2.0": 96.9657265025076,
+   "2.5": 109.2614506564072
+  }
+ },
+ "comparables": {
+  "ve_ebitda_q1_med_q3": [
+   9.05525,
+   13.612,
+   16.767
+  ],
+  "per_q1_med_q3": [
+   15.4636935,
+   25.829467,
+   32.142289999999996
+  ],
+  "prix_ve_ebitda": [
+   50.100265101373296,
+   85.61500664682495,
+   110.20468340677445
+  ],
+  "prix_per": [
+   43.607615669999994,
+   72.83909694,
+   90.64125779999998
+  ],
+  "retenus_ve_ebitda": 6,
+  "retenus_per": 4
+ },
+ "fourchettes": {
+  "DCF (WACC ± 1 pt, g ± 0,5 pt)": [
+   87.10618070201978,
+   236.77921745506154
+  ],
+  "VE/EBITDA des pairs": [
+   50.100265101373296,
+   110.20468340677445
+  ],
+  "PER des pairs": [
+   43.607615669999994,
+   90.64125779999998
+  ],
+  "Cours sur 52 semaines": [
+   57.26,
+   78.7
+  ]
+ }
+}

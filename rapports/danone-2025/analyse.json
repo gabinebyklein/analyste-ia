@@ -1,0 +1,16 @@
+{
+ "en_une_phrase": "En 2025, Danone affiche des ventes quasi stables à 27,3 Md€ (-0,3 %) et une marge opérationnelle courante en hausse à 13,4 %. Le cours de 69,8 € suppose une croissance perpétuelle de -1,0 %, alors que le DCF retient 2,0 %.",
+ "points_forts": [
+  "La rentabilité opérationnelle progresse : la marge opérationnelle courante passe de 13,0 % à 13,4 % et l'EBITDA de 4,7 Md€ à 5,0 Md€.",
+  "Le bilan se renforce : la dette financière nette baisse de 13,3 Md€ à 13,1 Md€ et le levier recule de 2,8x à 2,6x l'EBITDA.",
+  "Le groupe génère beaucoup de trésorerie : le flux de trésorerie disponible d'exploitation atteint 2,7 Md€ en 2025, pour 1,4 Md€ de dividendes versés."
+ ],
+ "points_de_vigilance": [
+  "L'activité ne croît pas : les ventes reculent de 0,3 %, de 27,4 Md€ à 27,3 Md€.",
+  "La rentabilité nette baisse : la marge nette passe de 7,4 % à 6,7 % et la rentabilité des capitaux propres de 11,4 % à 10,8 %, tandis que les amortissements montent de 4,3 % à 5,0 % des ventes.",
+  "Le flux de trésorerie disponible d'exploitation recule de 2,9 Md€ à 2,7 Md€, avec des investissements qui passent de 3,4 % à 3,9 % des ventes."
+ ],
+ "lecture_de_la_valorisation": "Le DCF, calculé avec un WACC de 5,5 % et une croissance perpétuelle de 2,0 %, donne 130,4 € par action. La valeur terminale en représente 84,9 %, et les tests de sensibilité donnent une fourchette de 87 à 237 €. Les comparables donnent 85,6 € sur le multiple VE/EBITDA médian de 13,6x (6 pairs) et 72,8 € sur le PER médian de 25,8x (4 pairs), dans des fourchettes de 50 à 110 € et de 44 à 91 €. Le cours de 69,8 € suppose une croissance perpétuelle de -1,0 %, et il se situe sous les deux valeurs médianes issues des pairs.",
+ "pour_un_gestionnaire_de_patrimoine": "Au cours actuel, le rendement du dividende est de 3,2 %, pour 1,4 Md€ versés en 2025, et l'endettement représente 2,6x l'EBITDA. Le beta de 0,67 indique que le titre réagit moins que le marché, et il a évolué entre 57,3 € et 78,7 € sur 52 semaines.",
+ "chiffres_non_retrouves": []
+}

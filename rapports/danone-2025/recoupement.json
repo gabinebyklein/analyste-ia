@@ -1,0 +1,75 @@
+{
+ "lei": "969500KMUQ2B6CBAF162",
+ "sources": [
+  "https://filings.xbrl.org/969500KMUQ2B6CBAF162/2024-12-31/ESEF/FR/0/dan-2024-12-31-fr.json",
+  "https://filings.xbrl.org/969500KMUQ2B6CBAF162/2023-12-31/ESEF/FR/0/dan-2023-12-31-fr.json"
+ ],
+ "comparaisons": [
+  {
+   "poste": "ventes",
+   "annee": "2024",
+   "lu_dans_le_rapport": 27376.0,
+   "page": 66,
+   "depot_officiel": 27376.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_operationnel",
+   "annee": "2024",
+   "lu_dans_le_rapport": 3379.0,
+   "page": 66,
+   "depot_officiel": 3379.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_net_part_du_groupe",
+   "annee": "2024",
+   "lu_dans_le_rapport": 2021.0,
+   "page": 66,
+   "depot_officiel": 2021.0,
+   "concorde": true
+  },
+  {
+   "poste": "bpa_dilue",
+   "annee": "2024",
+   "lu_dans_le_rapport": 3.13,
+   "page": 66,
+   "depot_officiel": 3.13,
+   "concorde": true
+  },
+  {
+   "poste": "capitaux_propres",
+   "annee": "2024",
+   "lu_dans_le_rapport": 17853.0,
+   "page": 69,
+   "depot_officiel": 17853.0,
+   "concorde": true
+  },
+  {
+   "poste": "interets_minoritaires",
+   "annee": "2024",
+   "lu_dans_le_rapport": 59.0,
+   "page": 69,
+   "depot_officiel": 59.0,
+   "concorde": true
+  },
+  {
+   "poste": "tresorerie",
+   "annee": "2024",
+   "lu_dans_le_rapport": 1475.0,
+   "page": 68,
+   "depot_officiel": 1475.0,
+   "concorde": true
+  },
+  {
+   "poste": "flux_exploitation",
+   "annee": "2024",
+   "lu_dans_le_rapport": 3831.0,
+   "page": 70,
+   "depot_officiel": 3831.0,
+   "concorde": true
+  }
+ ],
+ "nb_compares": 8,
+ "nb_concordants": 8
+}

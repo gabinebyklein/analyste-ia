@@ -4,12 +4,15 @@ Un chiffre introuvable est rejeté : l'IA ne peut pas inventer."""
 import json, re, sys, unicodedata
 import ia
 
-# Les trois états financiers, repérés par leur titre en haut de page
+# Les trois états financiers, repérés par leur titre : chaque société a sa formulation.
+# (LVMH « Tableau de variation de la trésorerie consolidée », Hermès « État des flux de trésorerie consolidés »,
+#  Danone « Résultat consolidé et résultat par action »…)
 TITRES = {
-    "compte_de_resultat": "COMPTE DE RÉSULTAT CONSOLIDÉ",
-    "bilan": "BILAN CONSOLIDÉ",
-    "flux": "TABLEAU DE VARIATION DE LA TRÉSORERIE CONSOLIDÉE",
+    "compte_de_resultat": r"(comptes? de )?r[ée]sultats? consolid[ée]s?( et r[ée]sultat par action)?",
+    "bilan": r"bilans? consolid[ée]s?|[ée]tat (consolid[ée] )?de (la )?situation financi[èe]re( consolid[ée]e)?",
+    "flux": r"(tableau|[ée]tat)x?s? (de variation de la |des flux de )tr[ée]sorerie( consolid[ée]e?s?)?",
 }
+CELLULE_CHIFFREE = re.compile(r"\(?[-−]?[\d\s]{1,12}([,.]\d+)?\)?")
 
 # Ce que l'on demande à Claude, poste par poste
 POSTES = {
@@ -34,7 +37,7 @@ POSTES = {
     "investissements_operationnels": "Investissements d'exploitation (capex)",
     "remboursements_dettes_locatives": "Remboursements des dettes locatives",
     "interets_locatifs_payes": "Dettes locatives : intérêts payés",
-    "dividendes_verses": "Dividendes et acomptes versés (total, opérations de financement)",
+    "dividendes_verses": "Dividendes et acomptes versés aux actionnaires de la société mère (opérations de financement)",
 }
 
 
@@ -44,17 +47,38 @@ def normaliser(texte):
     return re.sub(r"[\s  ]", "", texte)
 
 
+def lignes_propres(texte):
+    return [re.sub(r"\s+", " ", unicodedata.normalize("NFKC", l)).strip() for l in texte.splitlines()]
+
+
+def densite(texte):
+    """Nombre de cases chiffrées : un état financier en contient beaucoup, un sommaire très peu."""
+    return sum(1 for l in lignes_propres(texte) if l and CELLULE_CHIFFREE.fullmatch(l))
+
+
 def pages_des_etats(pages):
-    """Page dont une ligne est exactement le titre de l'état (espaces insécables neutralisés)."""
-    def lignes(texte):
-        return {re.sub(r"\s+", " ", unicodedata.normalize("NFKC", l)).strip() for l in texte.splitlines()}
+    """Pour chaque état : parmi les pages dont une ligne est exactement le titre, celle qui contient le plus de chiffres
+    (on écarte ainsi le sommaire et les tableaux résumés du rapport de gestion)."""
     trouve = {}
-    for cle, titre in TITRES.items():
-        for p in pages:
-            if titre in lignes(p["texte"]):
-                trouve[cle] = p["page"]
-                break
+    for cle, motif in TITRES.items():
+        candidates = [p for p in pages
+                      if any(re.fullmatch(motif + r"\.?", l, re.I) for l in lignes_propres(p["texte"]))
+                      and re.search(r"(millions|milliers) d", p["texte"], re.I)]      # un sommaire n'a pas d'unité
+        if candidates:
+            trouve[cle] = max(candidates, key=lambda p: densite(p["texte"]))["page"]
     return trouve
+
+
+def pages_a_lire(etats, par_numero):
+    """La page de chaque état, plus la suivante si elle le prolonge (bilan sur deux pages, par exemple)."""
+    a_lire = set(etats.values())
+    for n in etats.values():
+        suivante = par_numero.get(n + 1, "")
+        debut = " ".join(l for l in lignes_propres(suivante) if l)[:150]
+        a_son_titre = re.search(r"consolid", debut, re.I)                 # un autre état commence : on ne le prend pas
+        if n + 1 not in a_lire and densite(suivante) >= 25 and not a_son_titre:
+            a_lire.add(n + 1)
+    return sorted(a_lire)
 
 
 def demander_a_claude(extraits):
@@ -63,7 +87,8 @@ def demander_a_claude(extraits):
         "chaque page précédée de [PAGE n].\n"
         "Pour chaque poste demandé et pour CHAQUE année présente, recopie le chiffre EXACTEMENT "
         "comme il est écrit dans la page (mêmes chiffres, signe entre parenthèses conservé), "
-        "et donne le numéro de [PAGE] d'où il vient. Si un poste n'existe pas, ne le mets pas. "
+        "et donne le numéro de [PAGE] d'où il vient. Si un poste n'existe pas sous forme de ligne dans ces états "
+        "(par exemple s'il est inclus dans une autre ligne), ne le mets pas. "
         "N'invente rien, ne calcule rien.\n\n"
         "Postes : " + json.dumps(POSTES, ensure_ascii=False) + "\n\n" + extraits
     )
@@ -132,7 +157,7 @@ if __name__ == "__main__":
 
     etats = pages_des_etats(pages)
     print("États trouvés :", etats)
-    extraits = "\n\n".join(f"[PAGE {n}]\n{par_numero[n]}" for n in sorted(etats.values()))
+    extraits = "\n\n".join(f"[PAGE {n}]\n{par_numero[n]}" for n in pages_a_lire(etats, par_numero))
 
     lecture = demander_a_claude(extraits)
     verifie, rejete = verifier(lecture, par_numero)

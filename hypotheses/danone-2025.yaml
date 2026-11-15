@@ -1,0 +1,35 @@
+# Hypothèses de valorisation Danone, écrites et justifiées une par une.
+# Ce sont des CHOIX d'analyste, pas des faits : le tableau de sensibilité montre ce qui change si on se trompe.
+societe: Danone
+ticker: BN.PA
+lei: 969500KMUQ2B6CBAF162   # identifiant de la société, pour retrouver ses dépôts officiels ESEF
+annee_de_base: "2025"
+
+projection:   # 2026 à 2030
+  croissance_ventes_pct: [3.0, 3.0, 3.0, 3.0, 3.0]
+  # 2025 : −0,3 % publié, pénalisé par les changes. On retient 3 %, le bas de l'objectif de croissance
+  # à données comparables que Danone affiche depuis son plan « Renew » (3 à 5 % par an).
+  marge_roc_pct: [13.5, 13.7, 13.9, 14.1, 14.3]
+  # Marge opérationnelle courante 2025 : 13,4 % (2024 : 13,0 %). Amélioration lente, comme ces deux dernières années.
+  taux_impot_pct: 25.8          # taux légal de l'impôt sur les sociétés en France
+  bfr_pct_ventes_supplementaires: 0.0
+  # L'agroalimentaire tourne avec un besoin en fonds de roulement très faible : la variation du BFR a
+  # même dégagé de la trésorerie en 2024 et 2025. On ne bloque rien.
+  capex_pct_ventes: 3.7
+  # 2025 : 3,9 % ; 2024 : 3,4 %. Moyenne des deux ans.
+
+wacc:
+  taux_sans_risque_pct: 3.4     # Bund allemand 10 ans, oct. 2026 (même choix que pour LVMH)
+  prime_risque_marche_pct: 4.2  # Damodaran, marché mature, juillet 2026
+  beta: 0.67
+  # Yahoo Finance donne 0,16 : trop bas pour être utilisé tel quel (l'action a peu suivi le marché sur 5 ans).
+  # On retient le bêta sectoriel « Food Processing » de Damodaran (données mondiales, janvier 2026) : 0,67.
+  # Même avec ce bêta, le coût des fonds propres reste bas (6,2 %) : c'est la limite du MEDAF pour un groupe
+  # très défensif, et le DCF inversé montre que le marché exige davantage.
+  spread_dette_pct: 1.0         # notation BBB+ : Danone emprunte un peu au-dessus du taux sans risque
+
+valeur_terminale:
+  croissance_perpetuelle_pct: 2.0   # groupe mature : environ l'inflation de long terme
+
+comparables: [NESN.SW, ULVR.L, MDLZ, GIS, KHC, KDP]
+# Nestlé, Unilever, Mondelez, General Mills, Kraft Heinz, Keurig Dr Pepper

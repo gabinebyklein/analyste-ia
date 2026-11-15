@@ -7,10 +7,11 @@ py = [sys.executable]   # pas de -I : les étapes importent le module ia.py vois
 etapes = [
     ("Extraction du texte", py + ["analyste/extraire.py", str(next(p for p in dossier.glob("*.pdf") if not p.name.startswith("fiche"))), str(dossier / "pages.jsonl")]),
     ("Lecture par Claude + vérification", py + ["analyste/lire.py", str(dossier / "pages.jsonl"), str(dossier / "chiffres.json")]),
+    ("Recoupement avec le dépôt officiel ESEF", py + ["analyste/recouper.py", str(dossier), hypotheses]),
     ("Calculs et valorisation", py + ["analyste/calculer.py", str(dossier), hypotheses]),
     ("Rédaction + contrôle des chiffres", py + ["analyste/rediger.py", str(dossier)]),
     ("Fiche PDF", py + ["analyste/fiche.py", str(dossier)]),
 ]
 for nom, cmd in etapes:
     print(f"→ {nom}")
-    subprocess.run(cmd, check=True)
+    subprocess.run(cmd, check=nom != "Recoupement avec le dépôt officiel ESEF")   # étape facultative (réseau)

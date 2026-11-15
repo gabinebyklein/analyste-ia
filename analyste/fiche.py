@@ -1,5 +1,5 @@
 """Étape 5 : met tout en page sur une fiche A4, puis l'imprime en PDF (Chrome sans fenêtre)."""
-import datetime, html, json, pathlib, subprocess, sys
+import datetime, html, json, pathlib, subprocess, sys, unicodedata
 
 OUTIL = pathlib.Path(__file__).resolve().parent.parent / "outils" / "html2pdf"   # WebKit de macOS, sans fenêtre
 
@@ -14,12 +14,12 @@ def md(x):
     return fr(x / 1000, 1)
 
 
-def tableau_historique(c, r):
-    p = lambda poste: c["postes"][poste]["2025"]["page"]
+def tableau_historique(c, r, base):
+    p = lambda poste: c["postes"].get(poste, {}).get(base, {}).get("page", "–")
     lignes = [
         ("Ventes (Md€)", lambda a: md(r[a]["ventes"]), p("ventes")),
         ("Croissance des ventes", lambda a: fr(r[a]["croissance_ventes_pct"], 1) + " %" if r[a]["croissance_ventes_pct"] is not None else "–", p("ventes")),
-        ("Marge brute", lambda a: fr(r[a]["marge_brute_pct"], 1) + " %", p("marge_brute")),
+        ("Marge brute", lambda a: fr(r[a]["marge_brute_pct"], 1) + " %" if r[a]["marge_brute_pct"] is not None else "–", p("marge_brute")),
         ("Marge opérationnelle courante", lambda a: fr(r[a]["marge_roc_pct"], 1) + " %", p("resultat_operationnel_courant")),
         ("Résultat net part du groupe (Md€)", lambda a: md(c["postes"]["resultat_net_part_du_groupe"][a]["valeur"]), p("resultat_net_part_du_groupe")),
         ("Cash-flow disponible d'exploitation (Md€)", lambda a: md(r[a]["fcf_exploitation"]), p("flux_exploitation")),
@@ -42,9 +42,12 @@ def football_field(fourchettes, cours):
     for i, (nom, (a, b)) in enumerate(fourchettes.items()):
         y = 4 + i * (H + 6)
         barres += (f"<text x='{L - 8}' y='{y + 16}' text-anchor='end' class='lab' dy='-2.5'>{html.escape(nom)}</text>"
-                   f"<rect x='{x(a):.1f}' y='{y}' width='{x(b) - x(a):.1f}' height='{H}' class='bar{' marche' if 'Cours' in nom else ''}'/>"
-                   f"<text x='{x(a) + 3:.1f}' y='{y + 13.5}' class='val in'>{fr(a)}</text>"
-                   f"<text x='{x(b) - 3:.1f}' y='{y + 13.5}' text-anchor='end' class='val in'>{fr(b)}</text>")
+                   + f"<rect x='{x(a):.1f}' y='{y}' width='{x(b) - x(a):.1f}' height='{H}' class='bar{' marche' if 'Cours' in nom else ''}'/>"
+                   + (f"<text x='{x(a) + 3:.1f}' y='{y + 13.5}' class='val in'>{fr(a)}</text>"
+                      f"<text x='{x(b) - 3:.1f}' y='{y + 13.5}' text-anchor='end' class='val in'>{fr(b)}</text>"
+                      if x(b) - x(a) > 46 else     # barre trop courte : les valeurs passent de part et d'autre
+                      f"<text x='{x(a) - 3:.1f}' y='{y + 13.5}' text-anchor='end' class='val'>{fr(a)}</text>"
+                      f"<text x='{x(b) + 3:.1f}' y='{y + 13.5}' class='val'>{fr(b)}</text>"))
         ligne = y + H
     return (f"<svg viewBox='0 0 {L + W + 50} {ligne + 30}' class='ff'>{barres}"
             f"<line x1='{x(cours):.1f}' x2='{x(cours):.1f}' y1='0' y2='{ligne + 6}' class='cours'/>"
@@ -62,7 +65,15 @@ def sensibilite(s, w_central, g_central):
     return f"<table class='sens'>{tete}{corps}</table>"
 
 
-def page(c, v, a):
+def recoupe(r):
+    if not r or not r["nb_compares"]:
+        return ""
+    annees = sorted({l["annee"] for l in r["comparaisons"]})
+    return (f" ; {r['nb_compares']} d'entre eux ({', '.join(annees)}) recoupés avec le dépôt officiel ESEF de la société :"
+            f" {r['nb_concordants']} concordent")
+
+
+def page(c, v, a, recoupement=None):
     r, d, w = v["historique"], v["dcf"], v["wacc"]
     nb_verifies = sum(len(x) for x in c["postes"].values())
     liste = lambda xs: "".join(f"<li>{html.escape(x)}</li>" for x in xs)
@@ -119,7 +130,7 @@ footer {{ margin-top:10px; padding-top:5px; border-top:1px solid var(--filet); c
 <div class="grille">
   <section>
     <h2>Chiffres clés, lus dans le rapport</h2>
-    {tableau_historique(c, r)}
+    {tableau_historique(c, r, v['annee_de_base'])}
     <h2>Points forts</h2><ul>{liste(a['points_forts'])}</ul>
     <h2>Points de vigilance</h2><ul>{liste(a['points_de_vigilance'])}</ul>
   </section>
@@ -137,7 +148,7 @@ footer {{ margin-top:10px; padding-top:5px; border-top:1px solid var(--filet); c
 </div>
 <footer>
   Méthode : Claude lit les états financiers du rapport annuel et cite la page de chaque chiffre ; un programme vérifie que chaque chiffre figure bien
-  sur la page citée ({nb_verifies} chiffres vérifiés, {len(c['rejetes'])} rejeté). Tous les calculs sont faits en Python. Hypothèses du DCF détaillées et justifiées
+  sur la page citée ({nb_verifies} chiffres vérifiés, {len(c['rejetes'])} rejeté){recoupe(recoupement)}. Tous les calculs sont faits en Python. Hypothèses du DCF détaillées et justifiées
   dans le dépôt. Pages = numéros du fichier PDF. Analyste IA, conçu par Gabin Eby Klein avec Claude.
   <br><b>Document pédagogique : ne constitue ni un conseil en investissement ni une recommandation.</b>
 </footer>
@@ -149,7 +160,9 @@ if __name__ == "__main__":
     c = json.load(open(dossier / "chiffres.json"))
     v = json.load(open(dossier / "valorisation.json"))
     a = json.load(open(dossier / "analyse.json"))
-    (dossier / "fiche.html").write_text(page(c, v, a))
-    pdf = dossier / f"fiche-{v['societe'].lower()}.pdf"
+    r = json.load(open(dossier / "recoupement.json")) if (dossier / "recoupement.json").exists() else None
+    (dossier / "fiche.html").write_text(page(c, v, a, r))
+    nom = unicodedata.normalize("NFKD", v["societe"].lower()).encode("ascii", "ignore").decode()   # Hermès -> hermes
+    pdf = dossier / f"fiche-{nom}.pdf"
     subprocess.run([str(OUTIL), str(dossier / "fiche.html"), str(pdf)], capture_output=True, timeout=60)
     print(pdf)

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analyste IA</title>
+<meta name="description" content="Rapport annuel PDF → fiche d'analyse : chaque chiffre vérifié sur sa page et recoupé avec le dépôt officiel ESEF, DCF réglable. LVMH, Hermès, Danone.">
+<style>
+:root { --encre:#16181d; --gris:#5d6470; --filet:#d9dce1; --fond:#f4f5f2; --papier:#ffffff; --accent:#14532d; --rouge:#b42318; --ok:#14532d; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --encre:#e8eaed; --gris:#a2a8b2; --filet:#33373e; --fond:#1b1e23; --papier:#111316; --accent:#6fbf8a; --rouge:#f08a7e; --ok:#6fbf8a; } }
+:root[data-theme="dark"] { --encre:#e8eaed; --gris:#a2a8b2; --filet:#33373e; --fond:#1b1e23; --papier:#111316; --accent:#6fbf8a; --rouge:#f08a7e; --ok:#6fbf8a; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:var(--papier); color:var(--encre); font:15px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif; font-variant-numeric:tabular-nums; }
+main { max-width:1180px; margin:0 auto; padding:28px 16px 48px; }
+header { border-bottom:2px solid var(--encre); padding-bottom:12px; margin-bottom:16px; display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; }
+h1 { font:600 32px/1.1 "Iowan Old Style", Georgia, serif; letter-spacing:-.01em; }
+header p { color:var(--gris); margin-top:6px; max-width:720px; }
+.meta { color:var(--gris); font-size:12.5px; text-align:right; line-height:1.6; }
+.meta a { color:inherit; }
+h2 { font:600 12px "Helvetica Neue", sans-serif; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin:0 0 8px; }
+.etapes { display:grid; grid-template-columns:repeat(5, 1fr); gap:0; border:1px solid var(--filet); margin-bottom:22px; font-size:12.5px; }
+.etapes div { padding:8px 10px; border-left:1px solid var(--filet); }
+.etapes div:first-child { border-left:0; }
+.etapes b { display:block; font-size:13px; }
+.etapes span { color:var(--gris); }
+@media (max-width:820px) { .etapes { grid-template-columns:1fr 1fr; } .etapes div { border-left:0; border-top:1px solid var(--filet); } }
+.societes { display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap; }
+.societes button { font:600 16px "Iowan Old Style", Georgia, serif; padding:6px 16px; border:1px solid var(--filet); background:var(--papier); color:var(--encre); cursor:pointer; border-radius:3px; }
+.societes button[aria-pressed=true] { background:var(--encre); color:var(--papier); border-color:var(--encre); }
+.une { font:17px/1.45 "Iowan Old Style", Georgia, serif; margin-bottom:12px; max-width:900px; }
+.chiffres { display:grid; grid-template-columns:repeat(5, 1fr); border-top:1px solid var(--filet); border-bottom:1px solid var(--filet); margin-bottom:24px; }
+.chiffres div { padding:8px 10px; border-left:1px solid var(--filet); }
+.chiffres div:first-child { border-left:0; padding-left:0; }
+.chiffres b { display:block; font-size:21px; font-weight:600; }
+.chiffres span { color:var(--gris); font-size:12px; }
+@media (max-width:760px) { .chiffres { grid-template-columns:1fr 1fr; } .chiffres div { border-left:0; padding-left:0; } }
+.grille { display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:start; }
+.grille > * { min-width:0; }
+@media (max-width:900px) { .grille { grid-template-columns:1fr; gap:26px; } }
+section + section { margin-top:24px; }
+table { border-collapse:collapse; width:100%; font-size:13.5px; }
+th, td { padding:4px 6px; border-bottom:1px solid var(--filet); text-align:right; white-space:nowrap; }
+th { color:var(--gris); font-weight:600; font-size:12px; }
+th:first-child, td:first-child { text-align:left; padding-left:0; white-space:normal; }
+td.src { color:var(--gris); font-size:12px; }
+.badge { display:inline-block; font:400 12px "Helvetica Neue", sans-serif; text-transform:none; letter-spacing:0; padding:2px 8px; border:1px solid var(--ok); color:var(--ok); border-radius:12px; margin-left:6px; white-space:nowrap; }
+details { margin-top:8px; font-size:13px; }
+summary { cursor:pointer; color:var(--gris); }
+details table { margin-top:6px; font-size:12.5px; }
+ul { padding-left:18px; } li { margin-bottom:5px; font-size:14px; }
+.cadre { background:var(--fond); padding:14px 16px; }
+.reglages { display:grid; grid-template-columns:1fr 1fr; gap:10px 18px; margin:10px 0 14px; }
+@media (max-width:480px) { .reglages { grid-template-columns:1fr; } }
+.reglages label { display:block; font-size:12.5px; color:var(--gris); }
+.reglages label span { display:flex; justify-content:space-between; color:var(--encre); font-weight:600; font-size:13px; }
+input[type=range] { width:100%; accent-color:var(--accent); }
+.resultat { display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; border-top:1px solid var(--filet); padding-top:10px; }
+.resultat .gros { font-size:34px; font-weight:600; letter-spacing:-.01em; }
+.ecart { font-size:14px; }
+.sous { color:var(--gris); font-size:12.5px; }
+.ligne-chiffres { display:flex; gap:18px; flex-wrap:wrap; font-size:13px; margin-top:6px; color:var(--gris); }
+.ligne-chiffres b { color:var(--encre); }
+.boutons { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+.boutons button, .boutons a { font:inherit; font-size:13.5px; padding:6px 12px; border:1px solid var(--encre); background:var(--papier); color:var(--encre); cursor:pointer; text-decoration:none; border-radius:3px; }
+svg.ff { width:100%; height:auto; display:block; overflow:visible; }
+.ff text { font-size:11px; fill:var(--gris); }
+.ff .lab { fill:var(--encre); font-size:11.5px; }
+.ff .bar { fill:var(--accent); opacity:.8; } .ff .bar.dcf { opacity:1; } .ff .bar.marche { fill:var(--gris); opacity:.6; }
+.ff .cours { stroke:var(--rouge); stroke-width:1.5; stroke-dasharray:4 3; } .ff .coursl { fill:var(--rouge); font-weight:600; }
+.sens td.c { background:var(--fond); font-weight:700; }
+#etat { color:var(--gris); font-size:13px; }
+footer { margin-top:36px; padding-top:10px; border-top:1px solid var(--filet); color:var(--gris); font-size:12px; }
+footer a { color:inherit; } footer b { color:var(--encre); }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div>
+    <h1>Analyste IA</h1>
+    <p>Du rapport annuel de 500 pages à la fiche d'analyse : l'IA lit, le code vérifie chaque chiffre sur sa page et le recoupe avec le dépôt officiel de la société, puis calcule la valorisation.</p>
+  </div>
+  <div class="meta">Rapports annuels 2025 · Cours Yahoo Finance<br>Calculs en Python, exécutés dans la page<br><a href="https://github.com/gabinebyklein/analyste-ia">Code source et méthode</a></div>
+</header>
+
+<div class="etapes">
+  <div><b>1. Lecture</b><span>Claude lit les 3 états financiers et cite la page de chaque chiffre</span></div>
+  <div><b>2. Vérification</b><span>Un chiffre absent de la page citée est rejeté</span></div>
+  <div><b>3. Recoupement</b><span>Comparaison avec le dépôt officiel ESEF de la société</span></div>
+  <div><b>4. Valorisation</b><span>Ratios, DCF, comparables, en Python</span></div>
+  <div><b>5. Rédaction</b><span>Chaque nombre du texte est contrôlé ; aucun conseil</span></div>
+</div>
+
+<nav class="societes" id="societes" aria-label="Société"></nav>
+<p class="une" id="une"></p>
+<div class="chiffres" id="chiffres"></div>
+
+<div class="grille">
+<div>
+  <section>
+    <h2>Chiffres clés, lus dans le rapport</h2><div id="badge" style="margin:-4px 0 8px"></div>
+    <table id="historique"></table>
+    <details id="recoupement"></details>
+  </section>
+  <section><h2>Points forts</h2><ul id="forts"></ul></section>
+  <section><h2>Points de vigilance</h2><ul id="vigilance"></ul></section>
+  <section><h2>Pour un gestionnaire de patrimoine</h2><div class="cadre" id="gp"></div></section>
+</div>
+
+<div>
+  <section>
+    <h2>Le DCF, à vous de régler</h2>
+    <p class="sous">Les curseurs partent des hypothèses de l'analyste, écrites et justifiées dans le dépôt. Le calcul est refait en Python à chaque mouvement.</p>
+    <div class="reglages">
+      <label><span>Croissance des ventes <b id="v-croissance"></b></span><input type="range" id="croissance" min="-5" max="5" step="0.5" value="0"></label>
+      <label><span>Marge opérationnelle <b id="v-marge"></b></span><input type="range" id="marge" min="-8" max="8" step="0.5" value="0"></label>
+      <label><span>Investissements (% des ventes) <b id="v-capex"></b></span><input type="range" id="capex" min="1" max="12" step="0.1"></label>
+      <label><span>Croissance perpétuelle <b id="v-g"></b></span><input type="range" id="g" min="0" max="4" step="0.1"></label>
+      <label><span>Bêta <b id="v-beta"></b></span><input type="range" id="beta" min="0.3" max="1.8" step="0.01"></label>
+      <label><span>Taux sans risque <b id="v-rf"></b></span><input type="range" id="rf" min="1" max="6" step="0.1"></label>
+      <label><span>Prime de risque du marché <b id="v-erp"></b></span><input type="range" id="erp" min="3" max="7" step="0.1"></label>
+      <label><span>WACC obtenu <b id="v-wacc"></b></span><span class="sous" id="v-ke"></span></label>
+    </div>
+    <div id="etat">Chargement du moteur de calcul…</div>
+    <div class="resultat"><span class="gros" id="valeur"></span><span class="ecart" id="ecart"></span></div>
+    <div class="ligne-chiffres" id="details"></div>
+    <div class="boutons"><button type="button" id="reinit">Revenir aux hypothèses de l'analyste</button><a id="pdf" href="#">Télécharger la fiche PDF</a></div>
+  </section>
+  <section><h2>Fourchettes de valeur par action</h2><svg class="ff" id="ff" viewBox="0 0 560 150"></svg></section>
+  <section><h2>Projection</h2><table id="projection"></table></section>
+  <section><h2>Sensibilité (€ par action)</h2><table class="sens" id="sens"></table></section>
+</div>
+</div>
+
+<footer>
+  Pages = numéros du fichier PDF du document d'enregistrement universel. Recoupement : données ESEF republiées par filings.xbrl.org. Les hypothèses sont des choix d'analyste, pas des prévisions.
+  Analyste IA, conçu par Gabin Eby Klein avec Claude.
+  <br><b>Document pédagogique : ne constitue ni un conseil en investissement ni une recommandation.</b>
+</footer>
+</main>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"></script>
+<script>
+const $ = (id) => document.getElementById(id);
+const fr = (x, d = 0) => (x < 0 ? "−" : "") + Math.abs(x).toLocaleString("fr-FR", { minimumFractionDigits: d, maximumFractionDigits: d }).replace(/[   ]/g, " ");
+const md = (x) => fr(x / 1000, 1);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const NOMS = { ventes: "Ventes", marge_brute: "Marge brute", resultat_operationnel_courant: "Résultat opérationnel courant",
+  resultat_net_part_du_groupe: "Résultat net, part du groupe", bpa_dilue: "Bénéfice par action dilué", capitaux_propres: "Capitaux propres",
+  interets_minoritaires: "Intérêts minoritaires", tresorerie: "Trésorerie", dettes_locatives_long_terme: "Dettes locatives à plus d'un an",
+  dettes_locatives_court_terme: "Dettes locatives à moins d'un an", flux_exploitation: "Flux de trésorerie d'exploitation",
+  remboursements_dettes_locatives: "Remboursements des dettes locatives", resultat_operationnel: "Résultat opérationnel" };
+let evaluer = null, py = null, d = null, attente = null;
+
+async function demarrer() {
+  const liste = await (await fetch("web/donnees/index.json")).json();
+  $("societes").innerHTML = liste.map((s, i) => `<button type="button" data-id="${s.id}" aria-pressed="${i === 0}">${esc(s.societe)}</button>`).join("");
+  $("societes").querySelectorAll("button").forEach((b) => b.addEventListener("click", () => {
+    $("societes").querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b));
+    charger(b.dataset.id);
+  }));
+  await charger(liste[0].id);
+  try {
+    py = await loadPyodide();
+    py.FS.writeFile("/home/pyodide/calculer.py", await (await fetch("analyste/calculer.py")).text());
+    evaluer = py.runPython("from calculer import evaluer\nevaluer");
+    $("etat").textContent = "";
+    calculer();
+  } catch (e) { $("etat").textContent = "Le moteur de calcul n'a pas pu se charger : rechargez la page."; }
+}
+
+async function charger(id) {
+  d = await (await fetch(`web/donnees/${id}.json`)).json();
+  const a = d.analyse, h = d.hypotheses, base = d.base;
+  $("une").textContent = a.en_une_phrase;
+  $("chiffres").innerHTML = [
+    [fr(d.cours, 2) + " €", "Cours"], [md(d.capitalisation) + " Md€", "Capitalisation"],
+    [md(base.ventes) + " Md€", `Ventes ${d.annee_de_base}`], [fr(base.marge_roc_pct, 1) + " %", "Marge opérationnelle courante"],
+    [fr(d.dividende_pct, 1) + " %", "Rendement du dividende"]].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join("");
+  const annees = Object.keys(d.historique).sort(), r = d.historique;
+  const lignes = [
+    ["Ventes (Md€)", (y) => md(r[y].ventes), "ventes"],
+    ["Croissance des ventes", (y) => r[y].croissance_ventes_pct == null ? "–" : fr(r[y].croissance_ventes_pct, 1) + " %", "ventes"],
+    ["Marge brute", (y) => r[y].marge_brute_pct == null ? "–" : fr(r[y].marge_brute_pct, 1) + " %", "marge_brute"],
+    ["Marge opérationnelle courante", (y) => fr(r[y].marge_roc_pct, 1) + " %", "resultat_operationnel_courant"],
+    ["Cash-flow disponible d'exploitation (Md€)", (y) => md(r[y].fcf_exploitation), "flux_exploitation"],
+    ["Dette financière nette (Md€)", (y) => md(r[y].dette_financiere_nette), "tresorerie"],
+    ["Dette nette y. c. loyers / EBITDA", (y) => fr(r[y].levier_dette_nette_sur_ebitda, 1) + "x", "dettes_locatives_long_terme"],
+    ["Rentabilité des capitaux propres", (y) => fr(r[y].rentabilite_capitaux_propres_pct, 1) + " %", "capitaux_propres"],
+  ];
+  $("historique").innerHTML = `<tr><th></th>${annees.map((y) => `<th>${y}</th>`).join("")}<th>Page</th></tr>`
+    + lignes.map(([n, f, p]) => `<tr><td>${n}</td>${annees.map((y) => `<td>${f(y)}</td>`).join("")}<td class="src">${d.pages[p] ?? "–"}</td></tr>`).join("");
+  const rc = d.recoupement;
+  $("badge").innerHTML = `<span class="badge">${d.nb_verifies} vérifiés sur leur page${rc ? ` · ${rc.nb_concordants}/${rc.nb_compares} conformes au dépôt officiel` : ""}</span>`;
+  $("recoupement").innerHTML = rc ? `<summary>Voir le recoupement avec le dépôt officiel ESEF (${rc.nb_compares} chiffres)</summary>
+    <table><tr><th>Poste</th><th>Année</th><th>Lu dans le rapport</th><th>Page</th><th>Dépôt officiel</th><th></th></tr>
+    ${rc.comparaisons.map((c) => `<tr><td>${NOMS[c.poste] || c.poste}</td><td>${c.annee}</td><td>${fr(c.lu_dans_le_rapport, c.poste === "bpa_dilue" ? 2 : 0)}</td><td class="src">${c.page}</td><td>${fr(c.depot_officiel, c.poste === "bpa_dilue" ? 2 : 0)}</td><td>${c.concorde ? "✓" : "écart"}</td></tr>`).join("")}</table>
+    <p class="sous" style="margin-top:6px">Montants en millions d'euros (bénéfice par action en euros), signe ignoré. Source : filings.xbrl.org.</p>` : "";
+  $("forts").innerHTML = a.points_forts.map((x) => `<li>${esc(x)}</li>`).join("");
+  $("vigilance").innerHTML = a.points_de_vigilance.map((x) => `<li>${esc(x)}</li>`).join("");
+  $("gp").textContent = a.pour_un_gestionnaire_de_patrimoine;
+  $("pdf").href = d.fiche_pdf || "#";
+  reinitialiser();
+}
+
+function reinitialiser() {
+  const h = d.hypotheses;
+  $("croissance").value = 0; $("marge").value = 0;
+  $("capex").value = h.projection.capex_pct_ventes; $("g").value = h.valeur_terminale.croissance_perpetuelle_pct;
+  $("beta").value = h.wacc.beta; $("rf").value = h.wacc.taux_sans_risque_pct; $("erp").value = h.wacc.prime_risque_marche_pct;
+  calculer();
+}
+
+function hypotheses() {
+  const h = structuredClone(d.hypotheses), n = (id) => parseFloat($(id).value);
+  h.projection.croissance_ventes_pct = h.projection.croissance_ventes_pct.map((x) => x + n("croissance"));
+  h.projection.marge_roc_pct = h.projection.marge_roc_pct.map((x) => x + n("marge"));
+  h.projection.capex_pct_ventes = n("capex");
+  h.valeur_terminale.croissance_perpetuelle_pct = n("g");
+  h.wacc.beta = n("beta"); h.wacc.taux_sans_risque_pct = n("rf"); h.wacc.prime_risque_marche_pct = n("erp");
+  return h;
+}
+
+function etiquettes(h) {
+  const p = h.projection, plus = (x) => (x > 0 ? "+" : "") + fr(x, 1) + " pt";
+  const court = (x) => fr(x, Number.isInteger(x) ? 0 : 1);
+  const n = (id) => parseFloat($(id).value);
+  $("v-croissance").textContent = n("croissance") ? `${plus(n("croissance"))} → ${p.croissance_ventes_pct.map(court).join(" / ")} %` : p.croissance_ventes_pct.map(court).join(" / ") + " %";
+  $("v-marge").textContent = n("marge") ? `${plus(n("marge"))} → ${fr(p.marge_roc_pct[4], 1)} % en ${+d.annee_de_base + 5}` : `${fr(p.marge_roc_pct[0], 1)} → ${fr(p.marge_roc_pct[4], 1)} %`;
+  $("v-capex").textContent = fr(p.capex_pct_ventes, 1) + " %";
+  $("v-g").textContent = fr(h.valeur_terminale.croissance_perpetuelle_pct, 1) + " %";
+  $("v-beta").textContent = fr(h.wacc.beta, 2);
+  $("v-rf").textContent = fr(h.wacc.taux_sans_risque_pct, 1) + " %";
+  $("v-erp").textContent = fr(h.wacc.prime_risque_marche_pct, 1) + " %";
+}
+
+function calculer() {
+  const h = hypotheses();
+  etiquettes(h);
+  if (!evaluer) return;
+  clearTimeout(attente);
+  attente = setTimeout(() => {
+    const brut = evaluer(py.toPy(h), py.toPy(d.base), d.nb_actions_m, d.interets_minoritaires, d.cours, d.poids_dette);
+    const e = brut.toJs({ dict_converter: Object.fromEntries }); brut.destroy();
+    afficher(e, h);
+  }, 60);
+}
+
+function afficher(e, h) {
+  const g = e.croissance_perpetuelle_pct, w = e.wacc_pct;
+  $("v-wacc").textContent = fr(w, 2) + " %";
+  $("v-ke").textContent = `coût des fonds propres ${fr(e.cout_fonds_propres_pct, 2)} %, poids de la dette ${fr(d.poids_dette * 100, 1)} %`;
+  if (w - g < 0.5) { $("valeur").textContent = "–"; $("ecart").textContent = "Le WACC doit rester nettement au-dessus de la croissance perpétuelle."; return; }
+  const ecart = (e.prix_par_action / d.cours - 1) * 100;
+  $("valeur").textContent = fr(e.prix_par_action) + " € par action";
+  $("ecart").innerHTML = `<b>${ecart > 0 ? "+" : ""}${fr(ecart)} %</b> par rapport au cours de ${fr(d.cours, 2)} €`;
+  $("details").innerHTML = `<span>Valeur d'entreprise <b>${md(e.valeur_entreprise)} Md€</b></span><span>Valeur terminale <b>${fr(e.part_valeur_terminale_pct)} %</b> du total</span>`
+    + `<span>Le cours suppose une croissance perpétuelle de <b>${fr(e.croissance_implicite_dans_le_cours_pct, 1)} %</b></span>`;
+  $("projection").innerHTML = `<tr><th></th>${e.projection.map((l) => `<th>${l.annee}</th>`).join("")}</tr>`
+    + `<tr><td>Ventes (Md€)</td>${e.projection.map((l) => `<td>${md(l.ventes)}</td>`).join("")}</tr>`
+    + `<tr><td>Résultat opérationnel (Md€)</td>${e.projection.map((l) => `<td>${md(l.roc)}</td>`).join("")}</tr>`
+    + `<tr><td>Flux de trésorerie disponible (Md€)</td>${e.projection.map((l) => `<td>${md(l.fcf)}</td>`).join("")}</tr>`;
+  const gs = Object.keys(Object.values(e.sensibilite)[0]);
+  $("sens").innerHTML = `<tr><th>WACC \\ g</th>${gs.map((x) => `<th>${fr(+x, 1)} %</th>`).join("")}</tr>`
+    + Object.entries(e.sensibilite).map(([wi, l]) => `<tr><th>${fr(+wi, 1)} %</th>${Object.entries(l).map(([gi, v]) =>
+      `<td class="${Math.abs(+wi - w) < 0.06 && Math.abs(+gi - g) < 0.06 ? "c" : ""}">${+wi - +gi > 0.4 ? fr(v) : "–"}</td>`).join("")}</tr>`).join("");
+  const toutes = Object.values(e.sensibilite).flatMap((l) => Object.values(l)).filter((v) => isFinite(v) && v > 0);
+  const f = { "DCF (WACC ± 1, g ± 0,5)": [Math.min(...toutes), Math.max(...toutes)] };
+  for (const [k, v] of Object.entries(d.fourchettes)) if (!k.startsWith("DCF")) f[k] = v;
+  football(f, e.prix_par_action);
+}
+
+function football(f, dcf) {
+  const L = 230, W = 300, H = 18, vals = Object.values(f).flat().concat([d.cours, dcf]);
+  const lo = Math.min(...vals) * 0.8, hi = Math.max(...vals) * 1.05, x = (v) => L + (v - lo) / (hi - lo) * W;
+  let s = "", y = 4;
+  for (const [nom, [a, b]] of Object.entries(f)) {
+    const cls = nom.startsWith("DCF") ? "bar dcf" : nom.startsWith("Cours") ? "bar marche" : "bar";
+    s += `<text class="lab" x="${L - 8}" y="${y + 13}" text-anchor="end">${esc(nom)}</text><rect class="${cls}" x="${x(a)}" y="${y}" width="${Math.max(2, x(b) - x(a))}" height="${H}"/>`
+      + `<text x="${x(a) - 4}" y="${y + 13}" text-anchor="end">${fr(a)}</text><text x="${x(b) + 4}" y="${y + 13}">${fr(b)}</text>`;
+    y += H + 8;
+  }
+  s += `<line class="cours" x1="${x(d.cours)}" x2="${x(d.cours)}" y1="0" y2="${y}"/><text class="coursl" x="${x(d.cours)}" y="${y + 14}" text-anchor="middle">Cours : ${fr(d.cours)} €</text>`;
+  $("ff").setAttribute("viewBox", `0 0 560 ${y + 22}`);
+  $("ff").innerHTML = s;
+}
+
+document.querySelectorAll(".reglages input").forEach((el) => el.addEventListener("input", calculer));
+$("reinit").addEventListener("click", reinitialiser);
+demarrer();
+</script>
+</body>
+</html>

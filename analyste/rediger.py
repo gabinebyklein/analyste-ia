@@ -61,7 +61,8 @@ def valeurs_sources(objet, acc=None):
 def controler(texte, sources):
     """Un nombre du texte est accepté s'il correspond (arrondi près, en M€ ou Md€) à une valeur source."""
     suspects = []
-    texte = re.sub(r"52 semaines|\b(19|20)\d{2}\b", "", texte)   # expressions et années, pas des données
+    # expressions et années, pas des données (« 52 semaines », « WACC ± 1 pt, g ± 0,5 pt »)
+    texte = re.sub(r"52 semaines|±\s*\d+(,\d+)?\s*pt|\b(19|20)\d{2}\b", "", texte)
     for n in nombres(texte):
         if n <= 10 and n == int(n):          # « 3 phrases », « 5 ans », petits entiers de rédaction
             continue
@@ -78,7 +79,7 @@ def donnees_pour_claude(v):
     return {
         "historique": {a: {k: arr(x) for k, x in r.items()} for a, r in v["historique"].items()},
         "cours_eur": v["cours"], "capitalisation_m_eur": round(v["capitalisation"]),
-        "rendement_dividende_pct": m["dividendYield"], "beta": m["beta"],
+        "rendement_dividende_pct": m["dividendYield"], "beta": v["wacc"].get("beta_retenu", m["beta"]),   # celui du WACC
         "cours_52_semaines": [m["fiftyTwoWeekLow"], m["fiftyTwoWeekHigh"]],
         "wacc": {k: arr(x) for k, x in v["wacc"].items()},
         "dcf": {k: arr(x) for k, x in v["dcf"].items() if k != "valeur_entreprise"},

@@ -1,0 +1,187 @@
+{
+ "lei": "IOG4E947OATN0KJYSD45",
+ "sources": [
+  "https://filings.xbrl.org/IOG4E947OATN0KJYSD45/2024-12-31/ESEF/FR/0/IOG4E947OATN0KJYSD45-2024-12-31-0-fr.json",
+  "https://filings.xbrl.org/IOG4E947OATN0KJYSD45/2023-12-31/ESEF/FR/0/IOG4E947OATN0KJYSD45-2023-12-31AR.json"
+ ],
+ "comparaisons": [
+  {
+   "poste": "ventes",
+   "annee": "2023",
+   "lu_dans_le_rapport": 86153.0,
+   "page": 338,
+   "depot_officiel": 86153.0,
+   "concorde": true
+  },
+  {
+   "poste": "ventes",
+   "annee": "2024",
+   "lu_dans_le_rapport": 84683.0,
+   "page": 338,
+   "depot_officiel": 84683.0,
+   "concorde": true
+  },
+  {
+   "poste": "marge_brute",
+   "annee": "2023",
+   "lu_dans_le_rapport": 59277.0,
+   "page": 338,
+   "depot_officiel": 59277.0,
+   "concorde": true
+  },
+  {
+   "poste": "marge_brute",
+   "annee": "2024",
+   "lu_dans_le_rapport": 56765.0,
+   "page": 338,
+   "depot_officiel": 56765.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_net_part_du_groupe",
+   "annee": "2023",
+   "lu_dans_le_rapport": 15174.0,
+   "page": 338,
+   "depot_officiel": 15174.0,
+   "concorde": true
+  },
+  {
+   "poste": "resultat_net_part_du_groupe",
+   "annee": "2024",
+   "lu_dans_le_rapport": 12550.0,
+   "page": 338,
+   "depot_officiel": 12550.0,
+   "concorde": true
+  },
+  {
+   "poste": "bpa_dilue",
+   "annee": "2023",
+   "lu_dans_le_rapport": 30.33,
+   "page": 338,
+   "depot_officiel": 30.33,
+   "concorde": true
+  },
+  {
+   "poste": "bpa_dilue",
+   "annee": "2024",
+   "lu_dans_le_rapport": 25.12,
+   "page": 338,
+   "depot_officiel": 25.12,
+   "concorde": true
+  },
+  {
+   "poste": "capitaux_propres",
+   "annee": "2023",
+   "lu_dans_le_rapport": 62701.0,
+   "page": 340,
+   "depot_officiel": 62701.0,
+   "concorde": true
+  },
+  {
+   "poste": "capitaux_propres",
+   "annee": "2024",
+   "lu_dans_le_rapport": 69287.0,
+   "page": 340,
+   "depot_officiel": 69287.0,
+   "concorde": true
+  },
+  {
+   "poste": "interets_minoritaires",
+   "annee": "2023",
+   "lu_dans_le_rapport": 1684.0,
+   "page": 340,
+   "depot_officiel": 1684.0,
+   "concorde": true
+  },
+  {
+   "poste": "interets_minoritaires",
+   "annee": "2024",
+   "lu_dans_le_rapport": 1770.0,
+   "page": 340,
+   "depot_officiel": 1770.0,
+   "concorde": true
+  },
+  {
+   "poste": "tresorerie",
+   "annee": "2023",
+   "lu_dans_le_rapport": 7774.0,
+   "page": 340,
+   "depot_officiel": 7774.0,
+   "concorde": true
+  },
+  {
+   "poste": "tresorerie",
+   "annee": "2024",
+   "lu_dans_le_rapport": 9631.0,
+   "page": 340,
+   "depot_officiel": 9631.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_long_terme",
+   "annee": "2023",
+   "lu_dans_le_rapport": 13810.0,
+   "page": 340,
+   "depot_officiel": 13810.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_long_terme",
+   "annee": "2024",
+   "lu_dans_le_rapport": 14860.0,
+   "page": 340,
+   "depot_officiel": 14860.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_court_terme",
+   "annee": "2023",
+   "lu_dans_le_rapport": 2728.0,
+   "page": 340,
+   "depot_officiel": 2728.0,
+   "concorde": true
+  },
+  {
+   "poste": "dettes_locatives_court_terme",
+   "annee": "2024",
+   "lu_dans_le_rapport": 2972.0,
+   "page": 340,
+   "depot_officiel": 2972.0,
+   "concorde": true
+  },
+  {
+   "poste": "flux_exploitation",
+   "annee": "2023",
+   "lu_dans_le_rapport": 18400.0,
+   "page": 342,
+   "depot_officiel": 18400.0,
+   "concorde": true
+  },
+  {
+   "poste": "flux_exploitation",
+   "annee": "2024",
+   "lu_dans_le_rapport": 18924.0,
+   "page": 342,
+   "depot_officiel": 18924.0,
+   "concorde": true
+  },
+  {
+   "poste": "remboursements_dettes_locatives",
+   "annee": "2023",
+   "lu_dans_le_rapport": -2818.0,
+   "page": 342,
+   "depot_officiel": 2818.0,
+   "concorde": true
+  },
+  {
+   "poste": "remboursements_dettes_locatives",
+   "annee": "2024",
+   "lu_dans_le_rapport": -2915.0,
+   "page": 342,
+   "depot_officiel": 2915.0,
+   "concorde": true
+  }
+ ],
+ "nb_compares": 22,
+ "nb_concordants": 22
+}

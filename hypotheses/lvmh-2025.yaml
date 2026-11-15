@@ -2,6 +2,7 @@
 # Ce sont des CHOIX d'analyste, pas des faits : le tableau de sensibilité montre ce qui change si on se trompe.
 societe: LVMH
 ticker: MC.PA
+lei: IOG4E947OATN0KJYSD45   # identifiant de la société, pour retrouver ses dépôts officiels ESEF
 annee_de_base: "2025"
 
 projection:   # 2026 à 2030

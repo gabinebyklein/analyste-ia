@@ -1,0 +1,161 @@
+{
+ "unite": "millions d'euros (sauf résultat par action en euros)",
+ "pages_etats": {
+  "compte_de_resultat": 66,
+  "bilan": 68,
+  "flux": 70
+ },
+ "postes": {
+  "ventes": {
+   "2024": {
+    "valeur": 27376.0,
+    "page": 66
+   },
+   "2025": {
+    "valeur": 27283.0,
+    "page": 66
+   }
+  },
+  "resultat_operationnel_courant": {
+   "2024": {
+    "valeur": 3558.0,
+    "page": 66
+   },
+   "2025": {
+    "valeur": 3665.0,
+    "page": 66
+   }
+  },
+  "resultat_operationnel": {
+   "2024": {
+    "valeur": 3379.0,
+    "page": 66
+   },
+   "2025": {
+    "valeur": 2940.0,
+    "page": 66
+   }
+  },
+  "resultat_net_part_du_groupe": {
+   "2024": {
+    "valeur": 2021.0,
+    "page": 66
+   },
+   "2025": {
+    "valeur": 1825.0,
+    "page": 66
+   }
+  },
+  "bpa_dilue": {
+   "2024": {
+    "valeur": 3.13,
+    "page": 66
+   },
+   "2025": {
+    "valeur": 2.82,
+    "page": 66
+   }
+  },
+  "tresorerie": {
+   "2024": {
+    "valeur": 1475.0,
+    "page": 68
+   },
+   "2025": {
+    "valeur": 1983.0,
+    "page": 68
+   }
+  },
+  "capitaux_propres": {
+   "2024": {
+    "valeur": 17853.0,
+    "page": 69
+   },
+   "2025": {
+    "valeur": 16970.0,
+    "page": 69
+   }
+  },
+  "interets_minoritaires": {
+   "2024": {
+    "valeur": 59.0,
+    "page": 69
+   },
+   "2025": {
+    "valeur": 52.0,
+    "page": 69
+   }
+  },
+  "dette_financiere_long_terme": {
+   "2024": {
+    "valeur": 10175.0,
+    "page": 69
+   },
+   "2025": {
+    "valeur": 10074.0,
+    "page": 69
+   }
+  },
+  "dette_financiere_court_terme": {
+   "2024": {
+    "valeur": 4627.0,
+    "page": 69
+   },
+   "2025": {
+    "valeur": 5045.0,
+    "page": 69
+   }
+  },
+  "dotations_amortissements": {
+   "2024": {
+    "valeur": 1168.0,
+    "page": 70
+   },
+   "2025": {
+    "valeur": 1355.0,
+    "page": 70
+   }
+  },
+  "variation_bfr": {
+   "2024": {
+    "valeur": 534.0,
+    "page": 70
+   },
+   "2025": {
+    "valeur": 276.0,
+    "page": 70
+   }
+  },
+  "flux_exploitation": {
+   "2024": {
+    "valeur": 3831.0,
+    "page": 70
+   },
+   "2025": {
+    "valeur": 3779.0,
+    "page": 70
+   }
+  },
+  "investissements_operationnels": {
+   "2024": {
+    "valeur": -923.0,
+    "page": 70
+   },
+   "2025": {
+    "valeur": -1055.0,
+    "page": 70
+   }
+  },
+  "dividendes_verses": {
+   "2024": {
+    "valeur": -1348.0,
+    "page": 70
+   },
+   "2025": {
+    "valeur": -1379.0,
+    "page": 70
+   }
+  }
+ },
+ "rejetes": []
+}

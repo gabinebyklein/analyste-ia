@@ -1,0 +1,7 @@
+rapports/*/deu-*.pdf
+rapports/*/pages.jsonl
+rapports/*/fiche.html
+.venv
+outils/html2pdf
+.env
+tests
