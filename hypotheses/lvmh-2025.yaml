@@ -1,0 +1,33 @@
+# Hypothèses de valorisation LVMH, écrites et justifiées une par une.
+# Ce sont des CHOIX d'analyste, pas des faits : le tableau de sensibilité montre ce qui change si on se trompe.
+societe: LVMH
+ticker: MC.PA
+annee_de_base: "2025"
+
+projection:   # 2026 à 2030
+  croissance_ventes_pct: [0.0, 3.0, 5.0, 5.0, 5.0]
+  # 2025 : -4,6 %. On suppose une année plate puis un retour progressif vers ~5 %,
+  # proche de la croissance longue du marché du luxe. Hypothèse prudente, pas une prévision.
+  marge_roc_pct: [22.0, 22.5, 23.0, 23.5, 24.0]
+  # Marge opérationnelle courante 2025 : 22,0 % (2024 : 23,1 % ; 2023 : 26,5 %).
+  # Remontée partielle, sans revenir au pic de 2023.
+  taux_impot_pct: 25.8          # taux légal de l'impôt sur les sociétés en France
+  bfr_pct_ventes_supplementaires: 20.0
+  # Le luxe immobilise beaucoup de stocks : on bloque 20 % de chaque euro de ventes en plus.
+  capex_pct_ventes: 7.0
+  # 2025 : 5,7 %, plus bas des trois ans (2023 : 8,7 % ; 2024 : 6,5 %). On prend la moyenne 2023-2025.
+  # Amortissements et loyers en % des ventes : repris de 2025, lus dans le rapport.
+
+wacc:
+  taux_sans_risque_pct: 3.4
+  # Bund allemand 10 ans, oct. 2026. LVMH vend dans le monde entier : on prend le taux
+  # sans risque de la zone euro, pas l'OAT (5 %+), qui porte le risque de la dette française.
+  prime_risque_marche_pct: 4.2  # Damodaran, marché mature, juillet 2026
+  beta: 0.90                    # Yahoo Finance
+  spread_dette_pct: 0.5         # LVMH emprunte presque au taux sans risque (notation A+/AA-)
+
+valeur_terminale:
+  croissance_perpetuelle_pct: 2.5   # inflation long terme + un peu de croissance réelle
+
+comparables: [RMS.PA, KER.PA, CFR.SW, MONC.MI, 1913.HK, BRBY.L]
+# Hermès, Kering, Richemont, Moncler, Prada, Burberry

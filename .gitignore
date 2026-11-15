@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+.DS_Store
+outils/html2pdf
+rapports/*/pages.jsonl
+rapports/*/deu-*.pdf
+.env
+rapports/*/fiche.html

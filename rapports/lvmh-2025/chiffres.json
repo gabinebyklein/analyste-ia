@@ -1,0 +1,319 @@
+{
+ "unite": "millions d'euros (sauf résultats par action, en euros)",
+ "pages_etats": {
+  "compte_de_resultat": 338,
+  "bilan": 340,
+  "flux": 342
+ },
+ "postes": {
+  "ventes": {
+   "2025": {
+    "valeur": 80807.0,
+    "page": 338
+   },
+   "2024": {
+    "valeur": 84683.0,
+    "page": 338
+   },
+   "2023": {
+    "valeur": 86153.0,
+    "page": 338
+   }
+  },
+  "marge_brute": {
+   "2025": {
+    "valeur": 53528.0,
+    "page": 338
+   },
+   "2024": {
+    "valeur": 56765.0,
+    "page": 338
+   },
+   "2023": {
+    "valeur": 59277.0,
+    "page": 338
+   }
+  },
+  "resultat_operationnel_courant": {
+   "2025": {
+    "valeur": 17755.0,
+    "page": 338
+   },
+   "2024": {
+    "valeur": 19571.0,
+    "page": 338
+   },
+   "2023": {
+    "valeur": 22802.0,
+    "page": 338
+   }
+  },
+  "resultat_net_part_du_groupe": {
+   "2025": {
+    "valeur": 10878.0,
+    "page": 338
+   },
+   "2024": {
+    "valeur": 12550.0,
+    "page": 338
+   },
+   "2023": {
+    "valeur": 15174.0,
+    "page": 338
+   }
+  },
+  "bpa_dilue": {
+   "2025": {
+    "valeur": 21.85,
+    "page": 338
+   },
+   "2024": {
+    "valeur": 25.12,
+    "page": 338
+   },
+   "2023": {
+    "valeur": 30.33,
+    "page": 338
+   }
+  },
+  "capitaux_propres": {
+   "2025": {
+    "valeur": 68949.0,
+    "page": 340
+   },
+   "2024": {
+    "valeur": 69287.0,
+    "page": 340
+   },
+   "2023": {
+    "valeur": 62701.0,
+    "page": 340
+   }
+  },
+  "interets_minoritaires": {
+   "2025": {
+    "valeur": 1477.0,
+    "page": 340
+   },
+   "2024": {
+    "valeur": 1770.0,
+    "page": 340
+   },
+   "2023": {
+    "valeur": 1684.0,
+    "page": 340
+   }
+  },
+  "dette_financiere_long_terme": {
+   "2025": {
+    "valeur": 12418.0,
+    "page": 340
+   },
+   "2024": {
+    "valeur": 12091.0,
+    "page": 340
+   },
+   "2023": {
+    "valeur": 11227.0,
+    "page": 340
+   }
+  },
+  "dette_financiere_court_terme": {
+   "2025": {
+    "valeur": 7925.0,
+    "page": 340
+   },
+   "2024": {
+    "valeur": 10851.0,
+    "page": 340
+   },
+   "2023": {
+    "valeur": 10680.0,
+    "page": 340
+   }
+  },
+  "tresorerie": {
+   "2025": {
+    "valeur": 8794.0,
+    "page": 340
+   },
+   "2024": {
+    "valeur": 9631.0,
+    "page": 340
+   },
+   "2023": {
+    "valeur": 7774.0,
+    "page": 340
+   }
+  },
+  "dettes_locatives_long_terme": {
+   "2025": {
+    "valeur": 13384.0,
+    "page": 340
+   },
+   "2024": {
+    "valeur": 14860.0,
+    "page": 340
+   },
+   "2023": {
+    "valeur": 13810.0,
+    "page": 340
+   }
+  },
+  "dettes_locatives_court_terme": {
+   "2025": {
+    "valeur": 2634.0,
+    "page": 340
+   },
+   "2024": {
+    "valeur": 2972.0,
+    "page": 340
+   },
+   "2023": {
+    "valeur": 2728.0,
+    "page": 340
+   }
+  },
+  "resultat_operationnel": {
+   "2025": {
+    "valeur": 17099.0,
+    "page": 338
+   },
+   "2024": {
+    "valeur": 18907.0,
+    "page": 338
+   },
+   "2023": {
+    "valeur": 22560.0,
+    "page": 338
+   }
+  },
+  "dotations_amortissements": {
+   "2025": {
+    "valeur": 4858.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": 4568.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": 4146.0,
+    "page": 342
+   }
+  },
+  "amortissement_droits_utilisation": {
+   "2025": {
+    "valeur": 3143.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": 3228.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": 3031.0,
+    "page": 342
+   }
+  },
+  "impot_paye": {
+   "2025": {
+    "valeur": -4656.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": -5531.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": -5730.0,
+    "page": 342
+   }
+  },
+  "variation_bfr": {
+   "2025": {
+    "valeur": -576.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": -1925.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": -4577.0,
+    "page": 342
+   }
+  },
+  "flux_exploitation": {
+   "2025": {
+    "valeur": 18874.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": 18924.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": 18400.0,
+    "page": 342
+   }
+  },
+  "investissements_operationnels": {
+   "2025": {
+    "valeur": -4567.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": -5531.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": -7478.0,
+    "page": 342
+   }
+  },
+  "remboursements_dettes_locatives": {
+   "2025": {
+    "valeur": -2974.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": -2915.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": -2818.0,
+    "page": 342
+   }
+  },
+  "interets_locatifs_payes": {
+   "2025": {
+    "valeur": -545.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": -483.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": -356.0,
+    "page": 342
+   }
+  },
+  "dividendes_verses": {
+   "2025": {
+    "valeur": -7123.0,
+    "page": 342
+   },
+   "2024": {
+    "valeur": -7322.0,
+    "page": 342
+   },
+   "2023": {
+    "valeur": -7159.0,
+    "page": 342
+   }
+  }
+ },
+ "rejetes": []
+}

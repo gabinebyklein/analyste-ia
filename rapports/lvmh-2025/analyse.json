@@ -1,0 +1,16 @@
+{
+ "en_une_phrase": "LVMH a vu ses ventes passer de 86,2 Md€ en 2023 à 80,8 Md€ en 2025, avec une marge opérationnelle ramenée de 26,5 % à 22,0 %, tandis que le flux de trésorerie d'exploitation est monté à 11,3 Md€.",
+ "points_forts": [
+  "Le flux de trésorerie d'exploitation progresse chaque année : 8,1 Md€ en 2023, 10,5 Md€ en 2024, puis 11,3 Md€ en 2025.",
+  "La dette financière nette recule de 14,1 Md€ en 2023 à 11,5 Md€ en 2025, pour un levier stable autour de 1,1x l'EBITDA.",
+  "La marge brute reste élevée à 66,2 % en 2025, et la marge opérationnelle se maintient à 22,0 %."
+ ],
+ "points_de_vigilance": [
+  "Les ventes reculent pour la deuxième année de suite : -1,7 % en 2024, puis -4,6 % en 2025.",
+  "Les marges baissent à tous les niveaux : la marge opérationnelle passe de 26,5 % à 22,0 % et la marge nette de 17,6 % à 13,5 % entre 2023 et 2025.",
+  "La rentabilité des capitaux propres tombe de 24,9 % en 2023 à 16,1 % en 2025, et l'EBITDA de 30,0 Md€ à 25,8 Md€."
+ ],
+ "lecture_de_la_valorisation": "Le DCF, construit avec un WACC de 6,9 % et une croissance perpétuelle de 2,5 %, donne 581,3 € par action ; la valeur terminale en représente 82,1 %, et la fourchette de sensibilité va de 434 € à 879 €. Les comparables donnent 768,8 € en médiane sur le VE/EBITDA (15,8x, 5 sociétés retenues) et 544,7 € sur le PER (24,9x, 4 sociétés retenues). À 403 €, le cours suppose une croissance perpétuelle de 0,2 %, contre 2,5 % dans le scénario central du DCF.",
+ "pour_un_gestionnaire_de_patrimoine": "Le titre offre un rendement du dividende de 3,2 %, pour 7,1 Md€ de dividendes versés en 2025, et l'endettement reste mesuré avec un levier de 1,1x l'EBITDA. Le beta de 0,9 indique une volatilité proche de celle du marché, mais le cours a varié entre 376 € et 654 € sur 52 semaines.",
+ "chiffres_non_retrouves": []
+}
