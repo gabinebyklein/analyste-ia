@@ -5,3 +5,4 @@ rapports/*/fiche.html
 outils/html2pdf
 .env
 tests
+requirements.txt
